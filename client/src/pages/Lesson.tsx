@@ -47,7 +47,10 @@ export default function Lesson() {
         </section>
       ))}
 
-      <ExercisePanel lesson={lesson} exercise={exercise} nextDay={nextDay} />
+      {/* Keyed by exercise so navigating between days remounts the panel —
+          otherwise React reuses the instance and the previous day's editor
+          buffer, results, and revealed solution linger. */}
+      <ExercisePanel key={exercise.id} lesson={lesson} exercise={exercise} nextDay={nextDay} />
 
       <nav className="lesson-nav">
         <span>{prevDay && <Link to={`/day/${prevDay}`}>← Day {String(prevDay).padStart(2, '0')}</Link>}</span>
