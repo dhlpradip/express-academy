@@ -128,8 +128,8 @@ export default function ExercisePanel({ lesson, exercise, nextDay }: ExercisePan
 
         {language === 'ts' && (
           <p className="lang-note">
-            TypeScript mode: use <code>import</code>/<code>export default app</code>. The grader strips types and
-            tests behavior — for real type errors, open this code in VS Code.
+            TypeScript mode: use <code>import</code>/<code>export default app</code>. Your code is type-checked with
+            strict <code>tsc</code> first — type errors block the behavior tests, exactly like CI.
           </p>
         )}
 

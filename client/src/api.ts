@@ -6,8 +6,16 @@ export interface TestResult {
   detail: string;
 }
 
+export interface TypeCheckError {
+  line: number;
+  column: number;
+  code: number;
+  message: string;
+}
+
 export interface RunOutcome {
   fatal?: string;
+  typeErrors?: TypeCheckError[];
   results?: TestResult[];
   logs?: string;
 }

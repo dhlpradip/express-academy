@@ -5,6 +5,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { transform } from 'esbuild';
 import type { Exercise } from '@academy/shared/exercises';
+import { checkTypes, type TypeCheckError } from './typechecker.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const TMP_ROOT = path.join(__dirname, '..', '.tmp');
@@ -23,18 +24,23 @@ export interface TestResult {
 
 export interface RunOutcome {
   fatal?: string;
+  typeErrors?: TypeCheckError[];
   results?: TestResult[];
   logs: string;
 }
 
 /**
  * Run a student's code against an exercise's test spec. TypeScript submissions
- * are transpiled (types stripped, ESM -> CJS) with esbuild before execution —
- * behavior is graded, not types.
+ * are first type-checked with strict tsc — errors block the behavior tests,
+ * the same gate order as CI — then transpiled (ESM -> CJS) with esbuild.
  */
 export async function runAttempt(exercise: Exercise, code: string, language: Language = 'js'): Promise<RunOutcome> {
   let jsCode = code;
   if (language === 'ts') {
+    const typeErrors = checkTypes(code);
+    if (typeErrors.length > 0) {
+      return { typeErrors, logs: '' };
+    }
     try {
       const result = await transform(code, { loader: 'ts', format: 'cjs', target: 'node18' });
       jsCode = result.code;

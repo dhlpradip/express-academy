@@ -42,13 +42,15 @@ unlocks the next day).
 ## How grading works (which is itself an Express lesson)
 
 1. The client POSTs your code (+ language) to `POST /api/run` on the grader.
-2. `server/src/runner.ts` transpiles TypeScript submissions with esbuild (types stripped —
-   behavior is graded, not types), writes the code to a temp file, and spawns
+2. TypeScript submissions are first **type-checked with strict tsc** (`server/src/typechecker.ts`,
+   a warm LanguageService so repeat checks are fast) — type errors block the behavior tests,
+   the same gate order as CI. Clean code is then transpiled with esbuild.
+3. `server/src/runner.ts` writes the JS to a temp file and spawns
    `server/src/child-runner.cjs` in an isolated child process (12s timeout).
-3. The child `require()`s your file (that's why every exercise ends with `module.exports = app`
+4. The child `require()`s your file (that's why every exercise ends with `module.exports = app`
    in JS / `export default app` in TS, and never calls `app.listen` — the runner listens on a
    random free port).
-4. Each test in `shared/exercises/dayNN.js` is a declarative HTTP request + assertions on
+5. Each test in `shared/exercises/dayNN.js` is a declarative HTTP request + assertions on
    status, JSON body, and headers. Results stream back as the test log.
 
 `bcryptjs` and `jsonwebtoken` are installed and requirable from exercise code (days 10 & 14).
@@ -57,7 +59,8 @@ unlocks the next day).
 
 ```bash
 npm run check       # every reference solution (JS + TS) must pass its own tests;
-                    # every starter (both languages) must load without crashing
+                    # every starter (both languages) must load without crashing;
+                    # every TS solution AND starter must be clean under strict tsc
 npm run typecheck   # tsc --noEmit over server and client
 ```
 
