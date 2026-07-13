@@ -1,0 +1,22 @@
+{
+  "name": "express-academy",
+  "private": true,
+  "version": "1.0.0",
+  "description": "A 14-day interactive Express.js course with runnable, auto-graded exercises",
+  "workspaces": [
+    "shared",
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "dev": "concurrently -n server,client -c yellow,cyan \"npm run dev -w @academy/server\" \"npm run dev -w @academy/client\"",
+    "check": "tsx server/scripts/check-solutions.ts",
+    "typecheck": "npm run typecheck -w @academy/server && npm run typecheck -w @academy/client"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
