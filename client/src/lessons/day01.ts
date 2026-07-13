@@ -1,3 +1,5 @@
+import type { Lesson } from './types.ts';
+
 export default {
   day: 1,
   id: 'day01',
@@ -78,4 +80,4 @@ app.listen(3000, () => {
       'You need two separate `app.get()` calls, one per path',
     ],
   },
-};
+} satisfies Lesson;

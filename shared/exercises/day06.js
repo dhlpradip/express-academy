@@ -1,3 +1,4 @@
+/** @type {import('./index.js').Exercise} */
 export default {
   id: 'day06',
   title: 'Errors that never crash the server',

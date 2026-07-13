@@ -1,3 +1,5 @@
+import type { Lesson } from './types.ts';
+
 export default {
   day: 5,
   id: 'day05',
@@ -62,4 +64,4 @@ app.get('/todos/:id', (req, res) => {
       'For PATCH: `Object.assign(todo, req.body)` then `res.json(todo)`',
     ],
   },
-};
+} satisfies Lesson;

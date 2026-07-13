@@ -1,3 +1,4 @@
+/** @type {import('./index.js').Exercise} */
 export default {
   id: 'day01',
   title: 'Your first Express server',

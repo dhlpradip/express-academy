@@ -1,3 +1,5 @@
+import type { Lesson } from './types.ts';
+
 export default {
   day: 14,
   id: 'day14',
@@ -60,4 +62,4 @@ export default {
       'The owner is `req.user.username` — from the verified token, never from the body',
     ],
   },
-};
+} satisfies Lesson;

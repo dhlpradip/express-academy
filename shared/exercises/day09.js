@@ -1,3 +1,4 @@
+/** @type {import('./index.js').Exercise} */
 export default {
   id: 'day09',
   title: 'Async data layer (a database in disguise)',

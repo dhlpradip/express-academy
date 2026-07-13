@@ -1,3 +1,5 @@
+import type { Lesson } from './types.ts';
+
 export default {
   day: 6,
   id: 'day06',
@@ -71,4 +73,4 @@ app.get('/async-boom', asyncHandler(async (req, res) => {
       'Order: routes, then 404, then error handler',
     ],
   },
-};
+} satisfies Lesson;

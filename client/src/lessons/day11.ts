@@ -1,3 +1,5 @@
+import type { Lesson } from './types.ts';
+
 export default {
   day: 11,
   id: 'day11',
@@ -57,4 +59,4 @@ export default {
       'Route-level attachment keeps OPTIONS from being counted: `app.get(\'/data\', rateLimit, handler)`',
     ],
   },
-};
+} satisfies Lesson;

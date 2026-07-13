@@ -1,3 +1,5 @@
+import type { Lesson } from './types.ts';
+
 export default {
   day: 15,
   id: 'day15',
@@ -64,4 +66,4 @@ app.get('/products/:id', asyncHandler(async (req, res) => {
       'The dbCalls math in the tests assumes you do NOT cache 404s — check cache, fetch, then bail on null before setting',
     ],
   },
-};
+} satisfies Lesson;

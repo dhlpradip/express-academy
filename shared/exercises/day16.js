@@ -1,3 +1,4 @@
+/** @type {import('./index.js').Exercise} */
 export default {
   id: 'day16',
   title: 'Background jobs and queues',

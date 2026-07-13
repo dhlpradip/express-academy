@@ -1,3 +1,5 @@
+import type { Lesson } from './types.ts';
+
 export default {
   day: 4,
   id: 'day04',
@@ -55,4 +57,4 @@ app.post('/messages', (req, res) => {
       'The incoming header is `req.headers[\'content-type\']` — lowercase',
     ],
   },
-};
+} satisfies Lesson;

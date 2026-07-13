@@ -1,3 +1,5 @@
+import type { Lesson } from './types.ts';
+
 export default {
   day: 16,
   id: 'day16',
@@ -74,4 +76,4 @@ new Worker('emails', async (job) => {
       "If you see the runner's 'unhandled promise rejection' error, your processor leaked an exception — the catch belongs INSIDE it",
     ],
   },
-};
+} satisfies Lesson;

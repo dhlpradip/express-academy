@@ -1,3 +1,5 @@
+import type { Lesson } from './types.ts';
+
 export default {
   day: 9,
   id: 'day09',
@@ -52,4 +54,4 @@ app.get('/books/:id', asyncHandler(async (req, res) => {
       'You don\'t write any special code for /books/boom — if asyncHandler + error middleware are right, it just works. That\'s the point.',
     ],
   },
-};
+} satisfies Lesson;

@@ -1,3 +1,5 @@
+import type { Lesson } from './types.ts';
+
 export default {
   day: 7,
   id: 'day07',
@@ -77,4 +79,4 @@ app.post('/signup', (req, res) => {
       '`typeof age !== \'number\'` catches the string-"25" case the test sends',
     ],
   },
-};
+} satisfies Lesson;

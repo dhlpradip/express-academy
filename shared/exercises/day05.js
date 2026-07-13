@@ -1,3 +1,4 @@
+/** @type {import('./index.js').Exercise} */
 export default {
   id: 'day05',
   title: 'A full REST resource: /todos',

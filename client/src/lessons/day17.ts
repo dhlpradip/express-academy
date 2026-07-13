@@ -1,3 +1,5 @@
+import type { Lesson } from './types.ts';
+
 export default {
   day: 17,
   id: 'day17',
@@ -72,4 +74,4 @@ process.on('SIGTERM', () => {
       'In TS the handle type is `ReturnType<typeof setInterval>` — works in both Node and browser typings',
     ],
   },
-};
+} satisfies Lesson;

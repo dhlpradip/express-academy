@@ -1,3 +1,5 @@
+import type { Lesson } from './types.ts';
+
 export default {
   day: 13,
   id: 'day13',
@@ -70,4 +72,4 @@ test('POST /todos creates a todo', async () => {
       'The 502 case is a LOCAL try/catch with a chosen status — not the global error middleware',
     ],
   },
-};
+} satisfies Lesson;

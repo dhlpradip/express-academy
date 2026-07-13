@@ -1,3 +1,5 @@
+import type { Lesson } from './types.ts';
+
 export default {
   day: 10,
   id: 'day10',
@@ -74,4 +76,4 @@ const payload = jwt.verify(token, JWT_SECRET); // { username, iat, exp }`,
       'The forged-token test sends `Bearer not.a.realtoken` — your try/catch handles it with zero extra code',
     ],
   },
-};
+} satisfies Lesson;

@@ -1,3 +1,5 @@
+import type { Lesson } from './types.ts';
+
 export default {
   day: 8,
   id: 'day08',
@@ -65,4 +67,4 @@ app.use('/api/users', usersRouter);`,
       'Same string/number id comparison as day 5: `Number(req.params.id)`',
     ],
   },
-};
+} satisfies Lesson;

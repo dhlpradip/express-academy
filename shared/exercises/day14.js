@@ -1,3 +1,4 @@
+/** @type {import('./index.js').Exercise} */
 export default {
   id: 'day14',
   title: 'Capstone: a complete Notes API',

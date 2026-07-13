@@ -1,3 +1,5 @@
+import type { Lesson } from './types.ts';
+
 export default {
   day: 12,
   id: 'day12',
@@ -59,4 +61,4 @@ app.get('*', (req, res) => {
       'Both :name routes need the same 404 guard — feel free to share a helper or middleware',
     ],
   },
-};
+} satisfies Lesson;

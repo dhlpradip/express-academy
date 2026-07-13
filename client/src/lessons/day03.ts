@@ -1,3 +1,5 @@
+import type { Lesson } from './types.ts';
+
 export default {
   day: 3,
   id: 'day03',
@@ -67,4 +69,4 @@ app.get('/admin/stats', requireAdmin, (req, res) => {
       'Register `app.use(requestId)` BEFORE the routes so it runs first',
     ],
   },
-};
+} satisfies Lesson;

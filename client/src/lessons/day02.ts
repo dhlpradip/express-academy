@@ -1,3 +1,5 @@
+import type { Lesson } from './types.ts';
+
 export default {
   day: 2,
   id: 'day02',
@@ -67,4 +69,4 @@ app.get('/users/:id/posts/:postId', (req, res) => {
       'The test expects `userId: "7"` as a string — no conversion needed on this one',
     ],
   },
-};
+} satisfies Lesson;

@@ -1,3 +1,4 @@
+/** @type {import('./index.js').Exercise} */
 export default {
   id: 'day17',
   title: 'Scheduled tasks and graceful shutdown',
