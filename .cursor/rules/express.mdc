@@ -1,0 +1,14 @@
+---
+description: Express API conventions
+globs: ["**/routes/**", "**/controllers/**", "**/services/**", "**/middleware/**", "**/server/**/*.ts"]
+alwaysApply: false
+---
+
+# Express
+
+- Layered: routes → controllers → services → data. Keep HTTP out of services.
+- Async handlers must forward rejections to a central error middleware.
+- One error middleware last; consistent JSON `{ error: { code, message } }`.
+- Validate params/query/body with a schema (Zod/Joi) at the boundary.
+- Default security: helmet, explicit CORS allowlist, rate limiting, body limits.
+- Validated env config; fail fast on missing vars. Never log secrets/tokens.

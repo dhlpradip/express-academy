@@ -1,0 +1,16 @@
+---
+description: TypeScript style and safety conventions
+globs: ["**/*.ts", "**/*.tsx"]
+alwaysApply: false
+---
+
+# TypeScript
+
+- `strict` mode assumptions: no implicit `any`, handle `null`/`undefined`.
+- Prefer `type`/`interface` over inline shapes; export shared types.
+- Avoid `any` and unsafe casts (`as`). Use `unknown` + narrowing at boundaries.
+- Prefer `const`, immutable data, and pure functions. Avoid mutation of inputs.
+- Use discriminated unions over boolean flags for state that has modes.
+- No non-null assertions (`!`) unless provably safe and commented why.
+- Name async functions for what they return; always handle promise rejections.
+- Keep the full project context in `AGENTS.md` at the repo root.

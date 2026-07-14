@@ -1,0 +1,4 @@
+# Aider reads AGENTS.md as its convention file, keeping one source of truth.
+# Model/provider are chosen via CLI or env (OPENAI_API_KEY, ANTHROPIC_API_KEY,
+# OLLAMA_API_BASE, etc.) so this stays provider-agnostic.
+read: AGENTS.md

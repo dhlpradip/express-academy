@@ -1,0 +1,15 @@
+---
+description: React component conventions
+globs: ["**/*.tsx", "**/*.jsx"]
+alwaysApply: false
+---
+
+# React
+
+- Function components + hooks only; one component per file, typed props.
+- No unnecessary `useEffect` — compute during render or in event handlers.
+- Derive state; keep a single source of truth. Stable list `key`s (not index).
+- Handle loading / empty / error states explicitly for async data.
+- Accessibility required: semantic HTML, labels, keyboard support, focus.
+- Push side effects/business logic into hooks or plain modules.
+- Memoize only to fix a measured performance problem.
