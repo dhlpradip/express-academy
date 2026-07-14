@@ -80,4 +80,21 @@ app.listen(3000, () => {
       'You need two separate `app.get()` calls, one per path',
     ],
   },
+  resources: [
+    {
+      title: "Express — Hello World",
+      url: "https://expressjs.com/en/starter/hello-world.html",
+      note: "the official starter; the Express docs are short enough to read entirely",
+    },
+    {
+      title: "Node.js — Anatomy of an HTTP Transaction",
+      url: "https://nodejs.org/en/learn/http/anatomy-of-an-http-transaction",
+      note: "what Express is wrapping — read once so the raw layer is never a mystery",
+    },
+    {
+      title: "MDN — An overview of HTTP",
+      url: "https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview",
+      note: "the protocol itself; backend fluency starts here",
+    },
+  ],
 } satisfies Lesson;

@@ -62,4 +62,26 @@ export default {
       'The owner is `req.user.username` — from the verified token, never from the body',
     ],
   },
+  resources: [
+    {
+      title: "The Twelve-Factor App",
+      url: "https://12factor.net",
+      note: "config, logs, processes — the vocabulary of production apps, in 30 minutes",
+    },
+    {
+      title: "Node.js Best Practices",
+      url: "https://github.com/goldbergyoni/nodebestpractices",
+      note: "read it cover to cover now that every section maps to something you built",
+    },
+    {
+      title: "Render — Deploy Node.js",
+      url: "https://render.com/docs/deploy-node-express-app",
+      note: "ship this capstone publicly; deployment is a skill only deploying teaches",
+    },
+    {
+      title: "Prisma — Getting started",
+      url: "https://www.prisma.io/docs/getting-started",
+      note: "the capstone rebuild with a real database is your graduation project",
+    },
+  ],
 } satisfies Lesson;

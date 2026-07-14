@@ -76,4 +76,26 @@ const payload = jwt.verify(token, JWT_SECRET); // { username, iat, exp }`,
       'The forged-token test sends `Bearer not.a.realtoken` — your try/catch handles it with zero extra code',
     ],
   },
+  resources: [
+    {
+      title: "JWT.io — Introduction",
+      url: "https://jwt.io/introduction",
+      note: "decode real tokens in the debugger; seeing the payload demystifies everything",
+    },
+    {
+      title: "The Copenhagen Book",
+      url: "https://thecopenhagenbook.com",
+      note: "a free, current, no-nonsense guide to auth implementation — sessions, tokens, OAuth",
+    },
+    {
+      title: "OWASP — Password Storage Cheat Sheet",
+      url: "https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html",
+      note: "why bcrypt, what cost factor, and what replaced it (argon2)",
+    },
+    {
+      title: "OWASP — Authentication Cheat Sheet",
+      url: "https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html",
+      note: "the checklist real security reviews use",
+    },
+  ],
 } satisfies Lesson;

@@ -52,6 +52,24 @@ export default function Lesson() {
           buffer, results, and revealed solution linger. */}
       <ExercisePanel key={exercise.id} lesson={lesson} exercise={exercise} nextDay={nextDay} />
 
+      <section className="resources" aria-label="Further reading">
+        <h2>Go deeper</h2>
+        <p className="resources-lede">
+          The course teaches the pattern; these are the primary sources a working developer answers their own
+          questions from.
+        </p>
+        <ul>
+          {lesson.resources.map((r) => (
+            <li key={r.url}>
+              <a href={r.url} target="_blank" rel="noreferrer">
+                {r.title}
+              </a>
+              <span className="resource-note"> — {r.note}</span>
+            </li>
+          ))}
+        </ul>
+      </section>
+
       <nav className="lesson-nav">
         <span>{prevDay && <Link to={`/day/${prevDay}`}>← Day {String(prevDay).padStart(2, '0')}</Link>}</span>
         <span>

@@ -76,4 +76,21 @@ new Worker('emails', async (job) => {
       "If you see the runner's 'unhandled promise rejection' error, your processor leaked an exception — the catch belongs INSIDE it",
     ],
   },
+  resources: [
+    {
+      title: "BullMQ — Documentation",
+      url: "https://docs.bullmq.io",
+      note: "the production queue for Node; today’s job/worker/retry model maps 1:1",
+    },
+    {
+      title: "MDN — 202 Accepted",
+      url: "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/202",
+      note: "the two-paragraph spec behind the whole pattern",
+    },
+    {
+      title: "Node.js Best Practices — handling errors in async contexts",
+      url: "https://github.com/goldbergyoni/nodebestpractices",
+      note: "why unhandled rejections kill processes, and the process-level safety nets",
+    },
+  ],
 } satisfies Lesson;

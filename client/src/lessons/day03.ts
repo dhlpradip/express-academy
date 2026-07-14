@@ -69,4 +69,21 @@ app.get('/admin/stats', requireAdmin, (req, res) => {
       'Register `app.use(requestId)` BEFORE the routes so it runs first',
     ],
   },
+  resources: [
+    {
+      title: "Express — Using middleware",
+      url: "https://expressjs.com/en/guide/using-middleware.html",
+      note: "the five kinds of middleware and where each attaches",
+    },
+    {
+      title: "Express — Writing middleware",
+      url: "https://expressjs.com/en/guide/writing-middleware.html",
+      note: "the official version of exactly what you built today",
+    },
+    {
+      title: "morgan — HTTP request logger",
+      url: "https://github.com/expressjs/morgan",
+      note: "the production version of your logger middleware; read its source — it is small",
+    },
+  ],
 } satisfies Lesson;

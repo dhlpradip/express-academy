@@ -59,4 +59,26 @@ export default {
       'Route-level attachment keeps OPTIONS from being counted: `app.get(\'/data\', rateLimit, handler)`',
     ],
   },
+  resources: [
+    {
+      title: "MDN — Cross-Origin Resource Sharing (CORS)",
+      url: "https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS",
+      note: "the definitive reference; read it once slowly and CORS is solved forever",
+    },
+    {
+      title: "Express — Production security best practices",
+      url: "https://expressjs.com/en/advanced/best-practice-security.html",
+      note: "the official pre-launch checklist",
+    },
+    {
+      title: "Helmet",
+      url: "https://helmetjs.github.io",
+      note: "security headers in one line; read what each header actually does",
+    },
+    {
+      title: "express-rate-limit",
+      url: "https://www.npmjs.com/package/express-rate-limit",
+      note: "the production version of your counter — note the Redis store option",
+    },
+  ],
 } satisfies Lesson;

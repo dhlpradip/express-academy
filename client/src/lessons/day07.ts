@@ -79,4 +79,21 @@ app.post('/signup', (req, res) => {
       '`typeof age !== \'number\'` catches the string-"25" case the test sends',
     ],
   },
+  resources: [
+    {
+      title: "Zod",
+      url: "https://zod.dev",
+      note: "the schema validator you will actually use; pairs perfectly with TypeScript",
+    },
+    {
+      title: "express-validator",
+      url: "https://express-validator.github.io/docs/",
+      note: "the middleware-flavored alternative, common in older codebases",
+    },
+    {
+      title: "OWASP — Input Validation Cheat Sheet",
+      url: "https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html",
+      note: "validation as a security discipline, not just UX",
+    },
+  ],
 } satisfies Lesson;

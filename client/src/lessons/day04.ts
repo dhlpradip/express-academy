@@ -57,4 +57,26 @@ app.post('/messages', (req, res) => {
       'The incoming header is `req.headers[\'content-type\']` — lowercase',
     ],
   },
+  resources: [
+    {
+      title: "MDN — HTTP response status codes",
+      url: "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status",
+      note: "the full vocabulary; bookmark it, everyone does",
+    },
+    {
+      title: "MDN — HTTP headers",
+      url: "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers",
+      note: "every standard header, both directions",
+    },
+    {
+      title: "Express API — the Response object",
+      url: "https://expressjs.com/en/4x/api.html#res",
+      note: "send/json/status/set and friends like res.redirect and res.cookie",
+    },
+    {
+      title: "http.cat",
+      url: "https://http.cat",
+      note: "status codes as cats; unreasonably effective mnemonics",
+    },
+  ],
 } satisfies Lesson;

@@ -67,4 +67,21 @@ app.use('/api/users', usersRouter);`,
       'Same string/number id comparison as day 5: `Number(req.params.id)`',
     ],
   },
+  resources: [
+    {
+      title: "Express API — Router",
+      url: "https://expressjs.com/en/4x/api.html#router",
+      note: "router-level middleware, param handlers, and mergeParams",
+    },
+    {
+      title: "Bulletproof node.js project architecture",
+      url: "https://softwareontheroad.com/ideal-nodejs-project-structure/",
+      note: "the article behind the routes/controllers/services layout everyone uses",
+    },
+    {
+      title: "Node.js Best Practices — project structure",
+      url: "https://github.com/goldbergyoni/nodebestpractices",
+      note: "section 1 is project architecture; compare it with what you built",
+    },
+  ],
 } satisfies Lesson;

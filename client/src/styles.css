@@ -738,6 +738,53 @@ li code {
   margin: 10px 0;
 }
 
+/* ---------- resources ---------- */
+
+.resources {
+  margin-top: 40px;
+  padding: 20px 24px;
+  border: 1px solid var(--line-soft);
+  border-radius: 10px;
+  background: var(--panel);
+}
+
+.resources h2 {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+
+.resources-lede {
+  font-size: 13.5px;
+  color: var(--faint);
+  margin-bottom: 14px;
+}
+
+.resources ul {
+  list-style: none;
+}
+
+.resources li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 9px;
+  font-size: 14.5px;
+}
+.resources li::before {
+  content: '↗';
+  position: absolute;
+  left: 0;
+  color: var(--faint);
+}
+
+.resource-note {
+  color: var(--muted);
+}
+
 /* ---------- lesson footer nav ---------- */
 
 .lesson-nav {

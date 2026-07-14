@@ -6,6 +6,12 @@ export interface LessonSection {
   note?: string;
 }
 
+export interface Resource {
+  title: string;
+  url: string;
+  note: string;
+}
+
 export interface Lesson {
   day: number;
   id: string;
@@ -19,4 +25,6 @@ export interface Lesson {
     brief: string[];
     hints: string[];
   };
+  /** Required on purpose: every lesson must point beyond itself. */
+  resources: Resource[];
 }

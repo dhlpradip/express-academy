@@ -66,4 +66,26 @@ app.get('/products/:id', asyncHandler(async (req, res) => {
       'The dbCalls math in the tests assumes you do NOT cache 404s — check cache, fetch, then bail on null before setting',
     ],
   },
+  resources: [
+    {
+      title: "Redis — Documentation",
+      url: "https://redis.io/docs/latest/",
+      note: "the real thing; the commands page reads exactly like today’s fake client",
+    },
+    {
+      title: "ioredis",
+      url: "https://github.com/redis/ioredis",
+      note: "the Node client whose API today’s exercise mirrored",
+    },
+    {
+      title: "AWS — Caching best practices",
+      url: "https://aws.amazon.com/caching/best-practices/",
+      note: "strategies beyond cache-aside: write-through, TTL tuning, stampede protection",
+    },
+    {
+      title: "Martin Fowler — TwoHardThings",
+      url: "https://martinfowler.com/bliki/TwoHardThings.html",
+      note: "the provenance of the joke, plus the serious point underneath it",
+    },
+  ],
 } satisfies Lesson;

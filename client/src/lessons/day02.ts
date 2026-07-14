@@ -69,4 +69,21 @@ app.get('/users/:id/posts/:postId', (req, res) => {
       'The test expects `userId: "7"` as a string — no conversion needed on this one',
     ],
   },
+  resources: [
+    {
+      title: "Express — Routing guide",
+      url: "https://expressjs.com/en/guide/routing.html",
+      note: "route paths, patterns, and params — the canonical reference",
+    },
+    {
+      title: "Express API — the Request object",
+      url: "https://expressjs.com/en/4x/api.html#req",
+      note: "everything on req: params, query, body, and the ones you have not met yet",
+    },
+    {
+      title: "MDN — What is a URL?",
+      url: "https://developer.mozilla.org/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL",
+      note: "path vs query vs fragment, precisely defined",
+    },
+  ],
 } satisfies Lesson;

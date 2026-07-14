@@ -73,4 +73,21 @@ app.get('/async-boom', asyncHandler(async (req, res) => {
       'Order: routes, then 404, then error handler',
     ],
   },
+  resources: [
+    {
+      title: "Express — Error handling guide",
+      url: "https://expressjs.com/en/guide/error-handling.html",
+      note: "the official word on the four-argument signature and the default handler",
+    },
+    {
+      title: "Node.js Best Practices — error handling",
+      url: "https://github.com/goldbergyoni/nodebestpractices",
+      note: "the most-starred Node repo on GitHub; its error-handling section is industry consensus",
+    },
+    {
+      title: "express-async-handler",
+      url: "https://www.npmjs.com/package/express-async-handler",
+      note: "the npm version of the wrapper you wrote — the whole package is ~10 lines",
+    },
+  ],
 } satisfies Lesson;

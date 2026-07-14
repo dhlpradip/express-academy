@@ -54,4 +54,26 @@ app.get('/books/:id', asyncHandler(async (req, res) => {
       'You don\'t write any special code for /books/boom — if asyncHandler + error middleware are right, it just works. That\'s the point.',
     ],
   },
+  resources: [
+    {
+      title: "Prisma — Quickstart",
+      url: "https://www.prisma.io/docs/getting-started/quickstart-sqlite",
+      note: "your next step after this course: this books API against real SQLite in ~30 min",
+    },
+    {
+      title: "SQLBolt",
+      url: "https://sqlbolt.com",
+      note: "interactive SQL from zero — do this in parallel with the course",
+    },
+    {
+      title: "pgexercises",
+      url: "https://pgexercises.com",
+      note: "PostgreSQL practice against a real schema once SQLBolt feels easy",
+    },
+    {
+      title: "Drizzle ORM",
+      url: "https://orm.drizzle.team",
+      note: "the SQL-flavored alternative to Prisma; know both names for interviews",
+    },
+  ],
 } satisfies Lesson;

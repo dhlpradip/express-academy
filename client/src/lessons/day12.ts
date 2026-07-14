@@ -61,4 +61,21 @@ app.get('*', (req, res) => {
       'Both :name routes need the same 404 guard — feel free to share a helper or middleware',
     ],
   },
+  resources: [
+    {
+      title: "Express — Serving static files",
+      url: "https://expressjs.com/en/starter/static-files.html",
+      note: "express.static, virtual path prefixes, and caching",
+    },
+    {
+      title: "multer",
+      url: "https://github.com/expressjs/multer",
+      note: "the standard upload middleware; note the limits and fileFilter options",
+    },
+    {
+      title: "MDN — Content-Disposition",
+      url: "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Disposition",
+      note: "the header behind every download button, precisely specified",
+    },
+  ],
 } satisfies Lesson;

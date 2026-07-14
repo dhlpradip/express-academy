@@ -72,4 +72,21 @@ test('POST /todos creates a todo', async () => {
       'The 502 case is a LOCAL try/catch with a chosen status — not the global error middleware',
     ],
   },
+  resources: [
+    {
+      title: "supertest",
+      url: "https://github.com/ladjs/supertest",
+      note: "the API-testing tool this course’s grader imitates; use it in your own projects",
+    },
+    {
+      title: "Vitest",
+      url: "https://vitest.dev",
+      note: "the test runner to pair it with — familiar if you have used Jest",
+    },
+    {
+      title: "Node.js — Event loop, timers, and process.nextTick",
+      url: "https://nodejs.org/en/learn/asynchronous-work/event-loop-timers-and-nexttick",
+      note: "the interview classic: what actually happens between your awaits",
+    },
+  ],
 } satisfies Lesson;

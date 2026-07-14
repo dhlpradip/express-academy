@@ -74,4 +74,26 @@ process.on('SIGTERM', () => {
       'In TS the handle type is `ReturnType<typeof setInterval>` — works in both Node and browser typings',
     ],
   },
+  resources: [
+    {
+      title: "crontab.guru",
+      url: "https://crontab.guru",
+      note: "paste any cron expression, get English back — the tool everyone actually uses",
+    },
+    {
+      title: "node-cron",
+      url: "https://www.npmjs.com/package/node-cron",
+      note: "the in-app scheduler; note the timezone option",
+    },
+    {
+      title: "Express — Health checks and graceful shutdown",
+      url: "https://expressjs.com/en/advanced/healthcheck-graceful-shutdown.html",
+      note: "the official version of exactly today’s exercise",
+    },
+    {
+      title: "terminus",
+      url: "https://github.com/godaddy/terminus",
+      note: "production-grade graceful shutdown as a library, by GoDaddy",
+    },
+  ],
 } satisfies Lesson;

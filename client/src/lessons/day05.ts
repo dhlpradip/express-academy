@@ -64,4 +64,21 @@ app.get('/todos/:id', (req, res) => {
       'For PATCH: `Object.assign(todo, req.body)` then `res.json(todo)`',
     ],
   },
+  resources: [
+    {
+      title: "Microsoft — Web API design best practices",
+      url: "https://learn.microsoft.com/en-us/azure/architecture/best-practices/api-design",
+      note: "pragmatic REST guidance from a team that maintains thousands of endpoints",
+    },
+    {
+      title: "Zalando — RESTful API guidelines",
+      url: "https://opensource.zalando.com/restful-api-guidelines/",
+      note: "a real company’s complete API rulebook — what “conventions at scale” means",
+    },
+    {
+      title: "restfulapi.net",
+      url: "https://restfulapi.net/",
+      note: "REST concepts from first principles, including what the purists mean",
+    },
+  ],
 } satisfies Lesson;
