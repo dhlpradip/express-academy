@@ -7,7 +7,7 @@ const arcs = [
   { name: 'Foundations', days: [1, 2, 3, 4] },
   { name: 'Building APIs', days: [5, 6, 7, 8, 9] },
   { name: 'Production', days: [10, 11, 12, 13, 14] },
-  { name: 'Beyond the Request', days: [15, 16, 17] },
+  { name: 'Beyond the Request', days: [15, 16, 17, 18] },
 ];
 
 export default function Sidebar() {
@@ -22,7 +22,7 @@ export default function Sidebar() {
         </Link>
         <div className="listening">
           <span className="dot" aria-hidden="true" />
-          17-day backend bootcamp
+          18-day backend bootcamp
         </div>
       </div>
 

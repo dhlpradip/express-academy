@@ -15,11 +15,12 @@ import day14 from './day14.ts';
 import day15 from './day15.ts';
 import day16 from './day16.ts';
 import day17 from './day17.ts';
+import day18 from './day18.ts';
 import type { Lesson } from './types.ts';
 
 export type { Lesson, LessonSection } from './types.ts';
 
 export const lessons: Lesson[] = [
   day01, day02, day03, day04, day05, day06, day07, day08, day09,
-  day10, day11, day12, day13, day14, day15, day16, day17,
+  day10, day11, day12, day13, day14, day15, day16, day17, day18,
 ];

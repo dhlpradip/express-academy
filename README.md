@@ -1,6 +1,6 @@
 # Express Academy
 
-A private, local, 17-day interactive course for learning Express.js — built for a React developer
+A private, local, 18-day interactive course for learning Express.js — built for a React developer
 crossing over to the backend. Each day: concepts → a worked example → an exercise you complete in
 the browser, **in JavaScript or TypeScript** (toggle in the exercise panel; each language keeps its
 own saved code and reference solution). Your code is executed by a local Node process and graded
@@ -22,14 +22,14 @@ Then open http://localhost:5173. Two processes start:
 - **client** — the React course app (Vite, port 5173)
 - **server** — the grader API (Express, port 4600)
 
-## The 17 days
+## The 18 days
 
 | Arc | Days | Topics |
 |---|---|---|
 | Foundations | 01–04 | first server, routing/params, middleware, request & response |
 | Building APIs | 05–09 | REST CRUD, error handling, validation, routers/structure, async data |
 | Production | 10–14 | JWT auth, CORS & rate limiting, files, async patterns, capstone |
-| Beyond the Request | 15–17 | caching (Redis patterns), background jobs & queues, cron & graceful shutdown |
+| Beyond the Request | 15–18 | caching (Redis patterns), background jobs & queues, cron & graceful shutdown, Docker & env config |
 
 Days 15–17 simulate Redis and the email service in-process (like day 9's fake database) so the
 course stays zero-setup — the patterns transfer verbatim to `ioredis`/BullMQ/node-cron.

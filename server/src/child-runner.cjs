@@ -9,7 +9,14 @@
 const fs = require('fs');
 
 const [, , userFile, testsFile] = process.argv;
-const tests = JSON.parse(fs.readFileSync(testsFile, 'utf8'));
+const spec = JSON.parse(fs.readFileSync(testsFile, 'utf8'));
+const tests = Array.isArray(spec) ? spec : spec.tests;
+
+// Exercise-defined environment (the Docker/config day depends on this) —
+// applied BEFORE the student's module loads, like `docker run -e KEY=value`.
+for (const [key, value] of Object.entries((spec && spec.env) || {})) {
+  process.env[key] = value;
+}
 
 function emit(payload) {
   process.stdout.write('\n@@RESULTS@@' + JSON.stringify(payload) + '\n');
@@ -133,6 +140,12 @@ function evaluate(expect, res) {
   for (const needle of contains) {
     if (!res.text.toLowerCase().includes(String(needle).toLowerCase())) {
       failures.push(`expected body to contain "${needle}", got: ${preview(res.text) || '(empty body)'}`);
+    }
+  }
+  const lacks = expect.bodyLacks === undefined ? [] : [].concat(expect.bodyLacks);
+  for (const needle of lacks) {
+    if (res.text.toLowerCase().includes(String(needle).toLowerCase())) {
+      failures.push(`expected body NOT to contain "${needle}" — it leaked into the response`);
     }
   }
   if (expect.json !== undefined) {

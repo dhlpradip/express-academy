@@ -55,7 +55,7 @@ export async function runAttempt(exercise: Exercise, code: string, language: Lan
   const userFile = path.join(dir, 'attempt.cjs');
   const testsFile = path.join(dir, 'tests.json');
   await writeFile(userFile, jsCode, 'utf8');
-  await writeFile(testsFile, JSON.stringify(exercise.tests), 'utf8');
+  await writeFile(testsFile, JSON.stringify({ tests: exercise.tests, env: exercise.env ?? {} }), 'utf8');
 
   try {
     const { stdout, stderr, timedOut } = await execChild(['--no-warnings', CHILD, userFile, testsFile]);

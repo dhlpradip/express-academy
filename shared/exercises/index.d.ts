@@ -14,6 +14,8 @@ export interface TestRequest {
 export interface TestExpect {
   status?: number;
   bodyContains?: string | string[];
+  /** Strings that must NOT appear in the body (secret-leak tests). */
+  bodyLacks?: string | string[];
   /** Subset match for objects; exact length + per-index match for arrays. */
   json?: unknown;
   /** Dot-paths that must exist and be non-null in the JSON body. */
@@ -47,6 +49,8 @@ export interface Exercise {
   starterTs: string;
   solutionTs: string;
   tests: ExerciseTest[];
+  /** Environment variables injected into the child process before the code loads. */
+  env?: Record<string, string>;
 }
 
 export declare const exercises: Record<string, Exercise>;

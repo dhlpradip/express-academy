@@ -7,7 +7,7 @@ const arcs = [
   { name: 'Week 1 — Foundations', days: [1, 2, 3, 4] },
   { name: 'Week 1–2 — Building APIs', days: [5, 6, 7, 8, 9] },
   { name: 'Week 2 — Production', days: [10, 11, 12, 13, 14] },
-  { name: 'Week 3 — Beyond the request', days: [15, 16, 17] },
+  { name: 'Week 3 — Beyond the request', days: [15, 16, 17, 18] },
 ];
 
 export default function Home() {
@@ -23,7 +23,7 @@ export default function Home() {
           Learn Express by <em>shipping routes</em>.
         </h1>
         <p className="lede">
-          Seventeen days, one lesson a day: read the concepts, study a worked example, then write real Express code in
+          Eighteen days, one lesson a day: read the concepts, study a worked example, then write real Express code in
           the editor — in JavaScript, TypeScript, or both. Your code runs on a local Node process and real HTTP
           requests decide whether you pass. Days unlock in order — no skipping ahead.
         </p>
@@ -32,8 +32,8 @@ export default function Home() {
             {doneCount === 0 ? 'Start Day 1 →' : `Continue with Day ${firstIncomplete.day} →`}
           </Link>
         ) : (
-          <Link className="btn-cta" to="/day/17">
-            All 17 days complete — you did it 🎓
+          <Link className="btn-cta" to="/day/18">
+            All 18 days complete — you did it 🎓
           </Link>
         )}
       </div>

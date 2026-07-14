@@ -1,0 +1,32 @@
+# Day 18's worked example: the grader + a real Postgres + a real Redis.
+# `docker compose up` — then point your capstone graduation project at the URLs below.
+services:
+  api:
+    build: .
+    ports:
+      - "4600:4600"
+    environment:
+      DATABASE_URL: postgresql://app:app@db:5432/notes # "db" = the service name
+      REDIS_URL: redis://cache:6379
+    depends_on:
+      - db
+      - cache
+
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: app
+      POSTGRES_PASSWORD: app
+      POSTGRES_DB: notes
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  cache:
+    image: redis:7
+    ports:
+      - "6379:6379"
+
+volumes:
+  pgdata:
